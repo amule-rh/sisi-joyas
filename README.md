@@ -2,6 +2,11 @@
 
 Web de joyería en HTML, CSS y JavaScript puro, preparada para GitHub Pages. No necesita Node, backend ni build.
 
+## Actualización visual
+- Fondo editorial marfil con reflejos de luz lentos y discretos, sin destellos artificiales invasivos.
+- Interacciones suaves, respeto por `prefers-reduced-motion` y diseño responsive.
+- Dominio personalizado configurado en el archivo `CNAME` para `sisijoyas.store`.
+
 ## Contenido
 - `index.html`: inicio y catálogo filtrable.
 - `blog.html` y `blog-*.html`: artículos SEO con enlaces afiliados separados del catálogo propio.
@@ -27,7 +32,11 @@ En GitHub: **Add file → Upload files**, arrastra todos los archivos y carpetas
 4. Pulsa **Save**. Espera a que termine la publicación.
 5. La URL será `https://TU-USUARIO.github.io/sisi-joyas/` (sustituye TU-USUARIO por tu nombre de GitHub). No se puede confirmar la URL final hasta crear el repositorio.
 
-## 4. Editar el catálogo
+## 4. Conectar el dominio sisijoyas.store
+
+El archivo `CNAME` ya incluye `sisijoyas.store`. En GitHub abre **Settings → Pages → Custom domain**, escribe `sisijoyas.store` y guarda. En el panel DNS del proveedor del dominio, configura los registros A de la raíz con las IP oficiales actuales de GitHub Pages y un CNAME para `www` apuntando a `amule-rh.github.io` (si el repositorio sigue en esa cuenta). Consulta la guía oficial de GitHub Pages antes de guardar DNS: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site. Activa **Enforce HTTPS** cuando aparezca disponible. No elimines otros registros de correo que utilices.
+
+## 5. Editar el catálogo
 Abre `js/products.js`. Cada artículo tiene `id`, `category`, `status`, `name`, `description`, `price`, `image`, `marketplace` y `url`.
 - Categorías admitidas: `rings`, `earrings`, `necklaces`, `bracelets`.
 - Cuando vendas una pieza, cambia `status:"active"` por `status:"sold"` o elimina la entrada.
@@ -36,19 +45,19 @@ Abre `js/products.js`. Cada artículo tiene `id`, `category`, `status`, `name`, 
 - Para añadir una pieza, copia un objeto existente, asigna un `id` único y añade una coma entre objetos.
 - El enlace de compra debe apuntar al anuncio individual, no solo al perfil.
 
-## 5. Afiliados Awin
+## 6. Afiliados Awin
 Los enlaces de Miles Jewellery están en `window.SISI_AFFILIATES` dentro de `js/products.js` y en los artículos del blog. Conserva los parámetros de tracking. Los enlaces deben llevar `rel="sponsored nofollow noopener"` cuando corresponda. No insertes productos afiliados dentro del catálogo propio.
 Los enlaces de La Joya Jewelry aún no se han proporcionado; añádelos solo cuando tengas las URL de tracking generadas en Awin.
 
-## 6. Antes de publicar (imprescindible)
+## 7. Antes de publicar (imprescindible)
 - Completa los marcadores de `legal.html`, `privacy.html` y revisa `cookies.html` según tu actividad real.
 - Sustituye los productos de ejemplo por anuncios reales; no inventes precios, medidas, disponibilidad ni especificaciones de metal.
 - Confirma que tienes derechos para usar las fotos. Las fotos remotas de demostración pueden no representar tus artículos; cámbialas por fotos propias/autorizadas.
 - Añade tu dominio en los metadatos si lo compras y crea `sitemap.xml` con la URL definitiva.
 - Comprueba todos los enlaces desde móvil y escritorio.
 
-## 7. Idiomas
+## 8. Idiomas
 El botón `ES / EN` cambia los textos de interfaz. El contenido editorial del blog de esta primera versión está en español; las traducciones completas de cada artículo pueden añadirse en una segunda iteración.
 
-## 8. Imágenes y rendimiento
+## 9. Imágenes y rendimiento
 La plantilla usa imágenes remotas de demostración y Google Fonts. Para máxima velocidad y control, sustituye por fotos optimizadas WebP/AVIF alojadas en `assets/` y fuentes locales con licencia adecuada.
