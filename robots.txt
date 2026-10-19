@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# Añade aquí la URL del sitemap cuando publiques:
+# Sitemap: https://TU-USUARIO.github.io/sisi-joyas/sitemap.xml
