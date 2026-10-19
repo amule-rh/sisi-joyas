@@ -4,9 +4,10 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Estructura
 
-- `index.html`: portada y nueve recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
+- `index.html`: portada y catálogo de trece recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
 - `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones.
-- `js/main.js`: idioma ES/EN, filtros y menú móvil.
+- `js/main.js`: idioma ES/EN, búsqueda, filtros y menú móvil.
+- `js/assistant.js`: asistente local de reglas que recomienda fichas y enlaza guías; procesa las consultas en el navegador y no llama a una API.
 - `assets/products/`: imágenes optimizadas de producto asociadas a las fichas oficiales de Miles Jewellery.
 - `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: fotografías editoriales originales de la marca.
 - `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters generados del wordmark y el icono de gato; el sitio usa sus versiones optimizadas `sisi-logo-horizontal.webp` y `sisi-favicon.png`.
@@ -15,9 +16,9 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Catálogo y afiliación
 
-La portada distingue el bloque **Selección afiliada** de los enlaces a los perfiles propios de Vinted y Wallapop. No se deben presentar como anuncios propios los artículos enlazados a Miles Jewellery.
+La portada permite filtrar por categoría y buscar por texto. Distingue el catálogo afiliado de los enlaces a los perfiles propios de Vinted y Wallapop. No se deben presentar como anuncios propios los artículos enlazados a Miles Jewellery.
 
-Para actualizar una recomendación, cambia en `js/products.js` el `id`, la categoría, la ruta de imagen y la URL de Awin, y conserva los parámetros de seguimiento. Mantén los IDs sincronizados con `data-product-id` en `index.html`. Deja el nombre y la descripción del artículo en el HTML para que sean visibles incluso sin JavaScript.
+Para actualizar una recomendación, cambia en `js/products.js` el `id`, la categoría, la ruta de imagen y la URL de Awin, y conserva los parámetros de seguimiento. Mantén los IDs sincronizados con `data-product-id` en `index.html` y, cuando corresponda, con las recomendaciones de `js/assistant.js`. Deja el nombre y la descripción del artículo en el HTML para que sean visibles incluso sin JavaScript.
 
 Comprueba cada destino en la tienda antes de editar sus materiales o variantes. No fijes un precio ni prometas disponibilidad en esta web: ambos pueden cambiar. Los colgantes de corazón y Hamsa pueden tener opciones de cadena distintas; la ficha de Hamsa indica que la cadena no está incluida.
 
@@ -25,7 +26,7 @@ Los enlaces de afiliación deben conservar `rel="sponsored nofollow noopener nor
 
 ## Comprobaciones locales
 
-El sitio no necesita instalación. Desde la raíz del repositorio, puedes servirlo con `python3 -m http.server 8000` y abrir `http://localhost:8000`. Antes de guardar cambios, revisa que las URL Awin mantengan sus parámetros, que las fotos correspondan a cada producto y que las rutas de `sitemap.xml` sigan siendo correctas.
+El sitio no necesita instalación. Desde la raíz del repositorio, puedes servirlo con `python3 -m http.server 8000` y abrir `http://localhost:8000`. Antes de guardar cambios, revisa `node --check js/main.js`, `node --check js/assistant.js` y `node --check js/products.js`, que las URL Awin mantengan sus parámetros y que las fotos correspondan a cada producto.
 
 ## Pendiente legal
 

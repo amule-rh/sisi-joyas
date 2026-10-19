@@ -321,3 +321,226 @@
     transition: none;
   }
 }
+
+
+/* Catálogo ampliado y asistente local de compra */
+.catalog-tools {
+  align-items: end;
+}
+
+.catalog-search {
+  display: grid;
+  gap: 6px;
+  width: min(310px, 100%);
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.catalog-search input,
+.assistant-form input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--white);
+  padding: 10px 12px;
+  color: var(--ink);
+  font: 400 12px/1.4 var(--sans);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.catalog-search input:focus,
+.assistant-form input:focus {
+  outline: 2px solid rgba(173, 139, 90, .45);
+  outline-offset: 2px;
+}
+
+.catalog-count {
+  margin: -11px 0 18px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.catalog-assistant {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 14px 32px;
+  margin: 46px 0 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(255,254,250,.92), rgba(241,235,225,.72));
+}
+
+.assistant-heading h3 {
+  margin: 7px 0 8px;
+  font: 400 clamp(24px, 3vw, 32px)/1.2 var(--serif);
+  letter-spacing: -.02em;
+}
+
+.assistant-heading > p:last-child,
+.assistant-privacy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.assistant-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 10px;
+}
+
+.assistant-form label {
+  grid-column: 1 / -1;
+  color: #625d55;
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.assistant-form input {
+  min-height: 46px;
+}
+
+.assistant-form .button {
+  min-height: 46px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.assistant-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  grid-column: 2;
+}
+
+.assistant-prompts button {
+  min-height: 32px;
+  border: 1px solid #d9cbb8;
+  border-radius: 999px;
+  background: rgba(255,254,250,.75);
+  padding: 6px 11px;
+  color: #625d55;
+  cursor: pointer;
+  font-size: 9px;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.assistant-prompts button:hover {
+  border-color: var(--gold);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.assistant-response {
+  grid-column: 1 / -1;
+  min-height: 54px;
+  border-top: 1px solid rgba(173, 139, 90, .22);
+  padding-top: 16px;
+}
+
+.assistant-response-text {
+  max-width: 780px;
+  margin: 0 0 13px;
+  color: #5f5a52;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.assistant-recommendations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.assistant-product {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+  padding: 7px;
+  border: 1px solid #e7dfd5;
+  background: rgba(255,254,250,.8);
+  font: 400 11px/1.45 var(--serif);
+}
+
+.assistant-product img {
+  grid-row: span 2;
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+}
+
+.assistant-product small {
+  color: #8b7049;
+  font: 500 8px/1.4 var(--sans);
+}
+
+.assistant-guide-link {
+  display: inline-block;
+  margin: 4px 12px 3px 0;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+  color: #5e513f;
+  font-size: 9px;
+}
+
+.assistant-privacy {
+  grid-column: 1 / -1;
+  font-size: 9px;
+}
+
+@media (max-width: 760px) {
+  .catalog-tools {
+    align-items: stretch;
+  }
+
+  .catalog-search {
+    width: 100%;
+  }
+
+  .catalog-assistant {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin-top: 34px;
+    padding: 22px 18px;
+  }
+
+  .assistant-prompts {
+    grid-column: 1;
+  }
+
+  .assistant-recommendations {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-product {
+    grid-template-columns: 62px minmax(0, 1fr);
+  }
+
+  .assistant-product img {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media (max-width: 390px) {
+  .assistant-form {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-form label {
+    grid-column: 1;
+  }
+
+  .assistant-form .button {
+    justify-self: start;
+  }
+}

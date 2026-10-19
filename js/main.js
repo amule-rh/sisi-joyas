@@ -1,7 +1,7 @@
 const I18N = {
   es: {
     announcement: "Joyería seleccionada con luz, detalle y transparencia",
-    nav_shop: "Selección",
+    nav_shop: "Catálogo",
     nav_journal: "Journal",
     nav_story: "Nuestra esencia",
     nav_discover: "Descubrir",
@@ -14,9 +14,26 @@ const I18N = {
     trust_1: "Fotos oficiales de producto",
     trust_2: "Detalles revisados en tienda",
     trust_3: "Enlaces afiliados identificados",
-    catalog_eyebrow: "SISI / SELECCIÓN AFILIADA",
+    catalog_eyebrow: "SISI / CATÁLOGO AFILIADO",
     catalog_title: "Piezas con luz propia",
-    catalog_intro: "Nueve artículos de Miles Jewellery con fichas e imágenes oficiales activas. En la tienda puedes confirmar el precio, la disponibilidad y las opciones antes de comprar.",
+    catalog_intro: "Trece artículos de Miles Jewellery con fichas e imágenes oficiales. Comprueba precio, disponibilidad, metal y variantes en la tienda antes de comprar.",
+    catalog_search_label: "Buscar en el catálogo",
+    catalog_search_placeholder: "Prueba «pendientes» o «acabado dorado»",
+    catalog_count: "Mostrando {visible} de {total} joyas",
+    filter_group: "Filtrar catálogo",
+    assistant_eyebrow: "ASISTENTE DE COMPRA · RESPUESTAS LOCALES",
+    assistant_title: "Cuéntanos qué estás buscando",
+    assistant_intro: "Te orienta entre las piezas del catálogo y las guías de Sisi.",
+    assistant_question: "¿Qué te gustaría encontrar?",
+    assistant_placeholder: "Ej.: busco unos pendientes con acabado dorado",
+    assistant_submit: "Recomendar",
+    assistant_prompt_group: "Preguntas rápidas",
+    assistant_prompt_earrings: "Pendientes",
+    assistant_prompt_rings: "Anillos",
+    assistant_prompt_gold: "Acabado dorado",
+    assistant_prompt_gift: "Regalo",
+    assistant_default: "Pregunta por pendientes, anillos, pulseras, cadenas, acabados dorados, tallas o cuidado.",
+    assistant_notice: "Asistente local basado en el catálogo: tu consulta no se envía a servicios externos.",
     quick_guide_eyebrow: "GUÍA DE COMPRA",
     quick_guide_title: "Tres comprobaciones antes de elegir",
     quick_guide_gem_title: "Identifica la gema",
@@ -34,7 +51,7 @@ const I18N = {
     filter_bracelets: "Pulseras",
     filter_earrings: "Pendientes",
     filter_rings: "Anillos",
-    empty_catalog: "No hay piezas en esta categoría.",
+    empty_catalog: "No hay joyas que coincidan con esta búsqueda.",
     affiliate_product_tag: "Enlace afiliado · Awin",
     category_pendants: "Collares y colgantes",
     category_bracelets: "Pulseras",
@@ -58,6 +75,18 @@ const I18N = {
     product_star_bracelet_specs: "Plata 925 · plata rodiada u oro de 14K chapado · largos de 7–8 pulgadas.",
     product_gold_cross_name: "Cruz de moissanita con acabado dorado",
     product_gold_cross_specs: "Plata 925 · oro chapado · colgante solo o con cadena compatible.",
+    product_huggie_name: "Pendientes huggie de moissanita, dos hileras",
+    product_huggie_specs: "Plata 925 · 13,3 × 12,5 mm · plata rodiada u oro chapado · par.",
+    product_chain_name: "Collar tennis de moissanita de 2–6,5 mm",
+    product_chain_specs: "Plata 925 · anchos de 2–6,5 mm · largos 16–24 pulgadas · acabado dorado chapado disponible.",
+    product_wide_ring_name: "Anillo ancho de moissanita de 13 mm",
+    product_wide_ring_specs: "Plata 925 · tallas US 6–12 · opción de acabado dorado chapado.",
+    product_princess_name: "Pendientes princess cut de moissanita",
+    product_princess_specs: "Plata 925 rodiada · tamaños 4,25–9 mm · cierre de rosca o presión.",
+    product_huggie_aria: "Ver pendientes huggie de moissanita en Miles Jewellery",
+    product_chain_aria: "Ver cadena tennis de moissanita en Miles Jewellery",
+    product_wide_ring_aria: "Ver anillo ancho de moissanita de 13 mm en Miles Jewellery",
+    product_princess_aria: "Ver pendientes princess cut de moissanita en Miles Jewellery",
     price_at_shop: "Precio y opciones en tienda",
     product_cta: "Ver en Miles Jewellery",
     market_eyebrow: "PIEZAS PROPIAS DE SISI",
@@ -85,7 +114,7 @@ const I18N = {
   },
   en: {
     announcement: "Thoughtfully selected jewellery, with clarity and care",
-    nav_shop: "The edit",
+    nav_shop: "Catalogue",
     nav_journal: "Journal",
     nav_story: "Our story",
     nav_discover: "Discover",
@@ -98,9 +127,26 @@ const I18N = {
     trust_1: "Official product photos",
     trust_2: "Details checked at the retailer",
     trust_3: "Affiliate links clearly labelled",
-    catalog_eyebrow: "SISI / AFFILIATE EDIT",
+    catalog_eyebrow: "SISI / AFFILIATE CATALOGUE",
     catalog_title: "Pieces with their own light",
-    catalog_intro: "Nine Miles Jewellery products with active official listings and product images. Check current prices, availability and options with the retailer before buying.",
+    catalog_intro: "Thirteen Miles Jewellery products with official listings and images. Check current price, availability, metal and variants with the retailer before buying.",
+    catalog_search_label: "Search the catalogue",
+    catalog_search_placeholder: "Try “earrings” or “gold finish”",
+    catalog_count: "Showing {visible} of {total} pieces",
+    filter_group: "Filter catalogue",
+    assistant_eyebrow: "SHOPPING ASSISTANT · LOCAL ANSWERS",
+    assistant_title: "Tell us what you are looking for",
+    assistant_intro: "Get guidance from the catalogue and Sisi's own guides.",
+    assistant_question: "What would you like to find?",
+    assistant_placeholder: "E.g. I am looking for gold-finish earrings",
+    assistant_submit: "Recommend",
+    assistant_prompt_group: "Quick questions",
+    assistant_prompt_earrings: "Earrings",
+    assistant_prompt_rings: "Rings",
+    assistant_prompt_gold: "Gold finish",
+    assistant_prompt_gift: "Gift",
+    assistant_default: "Ask about earrings, rings, bracelets, chains, gold finishes, sizing or care.",
+    assistant_notice: "Local assistant based on this catalogue: your question is not sent to an external service.",
     quick_guide_eyebrow: "BUYING GUIDE",
     quick_guide_title: "Three checks before you choose",
     quick_guide_gem_title: "Identify the gemstone",
@@ -118,7 +164,7 @@ const I18N = {
     filter_bracelets: "Bracelets",
     filter_earrings: "Earrings",
     filter_rings: "Rings",
-    empty_catalog: "There are no pieces in this category.",
+    empty_catalog: "No jewellery matches this search.",
     affiliate_product_tag: "Affiliate link · Awin",
     category_pendants: "Necklaces & pendants",
     category_bracelets: "Bracelets",
@@ -142,6 +188,18 @@ const I18N = {
     product_star_bracelet_specs: "925 silver · rhodium-plated silver or 14K gold-plated finish · 7–8 in lengths.",
     product_gold_cross_name: "Gold-finish moissanite cross",
     product_gold_cross_specs: "925 silver · gold-plated finish · pendant alone or compatible chain option.",
+    product_huggie_name: "Two-row moissanite huggie hoops",
+    product_huggie_specs: "925 silver · 13.3 × 12.5 mm · rhodium or gold-plated finish · pair.",
+    product_chain_name: "2–6.5 mm moissanite tennis chain",
+    product_chain_specs: "925 silver · 2–6.5 mm widths · 16–24 in lengths · gold-plated finish available.",
+    product_wide_ring_name: "13 mm wide moissanite band ring",
+    product_wide_ring_specs: "925 silver · US sizes 6–12 · gold-plated finish option.",
+    product_princess_name: "Princess-cut moissanite stud earrings",
+    product_princess_specs: "Rhodium-plated 925 silver · 4.25–9 mm sizes · screw or push backs.",
+    product_huggie_aria: "View moissanite huggie earrings at Miles Jewellery",
+    product_chain_aria: "View moissanite tennis chain at Miles Jewellery",
+    product_wide_ring_aria: "View 13 mm wide moissanite ring at Miles Jewellery",
+    product_princess_aria: "View princess-cut moissanite earrings at Miles Jewellery",
     price_at_shop: "Price and options at retailer",
     product_cta: "View at Miles Jewellery",
     market_eyebrow: "SISI'S OWN LISTINGS",
@@ -201,16 +259,27 @@ function applyAffiliateData() {
 
 function applyFilters(category) {
   const selected = category || document.querySelector(".filter.active")?.dataset.category || "all";
+  const query = document.querySelector("#catalog-search")?.value.trim().toLocaleLowerCase() || "";
+  const cards = [...document.querySelectorAll("[data-affiliate-card]")];
   let visibleCount = 0;
 
-  document.querySelectorAll("[data-affiliate-card]").forEach((card) => {
-    const visible = selected === "all" || card.dataset.category === selected;
+  cards.forEach((card) => {
+    const searchable = `${card.textContent} ${card.querySelector("img")?.alt || ""}`.toLocaleLowerCase();
+    const matchesCategory = selected === "all" || card.dataset.category === selected;
+    const matchesSearch = !query || searchable.includes(query);
+    const visible = matchesCategory && matchesSearch;
     card.hidden = !visible;
     if (visible) visibleCount += 1;
   });
 
   const emptyState = document.querySelector("#empty-state");
   if (emptyState) emptyState.hidden = visibleCount > 0;
+  const count = document.querySelector("#catalog-count");
+  if (count) {
+    count.textContent = t("catalog_count")
+      .replace("{visible}", String(visibleCount))
+      .replace("{total}", String(cards.length));
+  }
 
   document.querySelectorAll(".filter").forEach((button) => {
     const active = button.dataset.category === selected;
@@ -227,6 +296,14 @@ function applyLang() {
     if (value) element.innerHTML = value;
   });
 
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    element.placeholder = t(element.dataset.i18nPlaceholder);
+  });
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+  });
+
   document.querySelectorAll("[data-alt-es][data-alt-en]").forEach((image) => {
     image.alt = lang === "es" ? image.dataset.altEs : image.dataset.altEn;
   });
@@ -240,6 +317,7 @@ function applyLang() {
   const blogIntro = document.querySelector("[data-blog-intro]");
   if (blogTitle) blogTitle.textContent = t("blog_title");
   if (blogIntro) blogIntro.textContent = t("blog_intro");
+  applyFilters();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -263,6 +341,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".filter").forEach((button) => {
     button.addEventListener("click", () => applyFilters(button.dataset.category));
   });
+
+  document.querySelector("#catalog-search")?.addEventListener("input", () => applyFilters());
 
   const menuButton = document.querySelector("#menu-toggle");
   const navigation = document.querySelector("#primary-navigation");

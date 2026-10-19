@@ -1,7 +1,7 @@
 /*
  * Recomendaciones afiliadas de Miles Jewellery.
- * Las fichas visibles también están escritas en index.html para que el contenido
- * y los enlaces sigan disponibles sin JavaScript. Mantén estos IDs sincronizados.
+ * Las fichas también se escriben en index.html para que contenido y enlaces
+ * permanezcan disponibles sin JavaScript. Mantén los IDs sincronizados.
  */
 window.SISI_AFFILIATES = [
   {
@@ -66,5 +66,33 @@ window.SISI_AFFILIATES = [
     merchant: "Miles Jewellery",
     image: "assets/products/miles-cross-gold-moissanite.webp",
     url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2Fmoissanite-cross-pendant-925-silver"
+  },
+  {
+    id: "miles-huggie-2row",
+    category: "earrings",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-huggie-2row.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2F2r-moissanite-huggie-hoop-earrings"
+  },
+  {
+    id: "miles-tennis-chain",
+    category: "pendants",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-tennis-chain.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2Fmoissanite-tennis-chain"
+  },
+  {
+    id: "miles-ring-13mm",
+    category: "rings",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-ring-13mm.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2F13mm-moissanite-ring"
+  },
+  {
+    id: "miles-princess-studs",
+    category: "earrings",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-princess-studs.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2Fprincess-cut-moissanite-stud-earrings"
   }
 ];
