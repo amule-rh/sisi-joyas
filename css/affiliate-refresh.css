@@ -544,3 +544,210 @@
     justify-self: start;
   }
 }
+
+
+/* Vitrina separada de anuncios propios de Vinted y Wallapop */
+.own-listings-section {
+  border-top: 1px solid var(--line);
+  padding-top: 64px;
+}
+
+.own-listings-heading {
+  margin-bottom: 17px;
+}
+
+.own-listings-note {
+  max-width: 900px;
+  margin: 0 0 24px;
+  border-left: 2px solid var(--gold);
+  padding: 3px 0 3px 12px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.own-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 16px;
+}
+
+.own-listing-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: 0 5px 20px rgba(45, 38, 29, .035);
+}
+
+.own-listing-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: #f0ede8;
+}
+
+.own-listing-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.own-listing-card:hover .own-listing-image img {
+  transform: scale(1.025);
+}
+
+.own-listing-badge {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  max-width: calc(100% - 22px);
+  background: rgba(255, 254, 250, .92);
+  padding: 7px 9px;
+  color: #62533f;
+  font-size: 8px;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.own-listing-info {
+  display: flex;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 15px 14px 13px;
+}
+
+.own-listing-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.own-listing-label .product-category {
+  margin: 0;
+}
+
+.own-listing-source {
+  flex: 0 0 auto;
+  color: #8b7049;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.own-listing-info h3 {
+  margin: 9px 0 6px;
+  color: var(--ink);
+  font: 400 17px/1.28 var(--serif);
+  letter-spacing: -.01em;
+}
+
+.own-listing-desc {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.own-listing-warning {
+  border-left: 2px solid #a56d46;
+  padding-left: 8px;
+  color: #6d4b35;
+}
+
+.own-listing-buy {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  color: #5c4c37;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.own-listing-buy:hover,
+.own-listing-buy:focus-visible {
+  color: #9a7545;
+}
+
+.own-listing-buy:focus-visible,
+.own-listing-image:focus-visible {
+  outline: 2px solid rgba(173, 139, 90, .65);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1120px) {
+  .own-listing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .own-listings-section {
+    padding-top: 44px;
+  }
+
+  .own-listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px 12px;
+  }
+
+  .own-listing-info {
+    min-height: 220px;
+    padding: 12px 10px;
+  }
+
+  .own-listing-info h3 {
+    font-size: 15px;
+  }
+
+  .own-listing-desc {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 370px) {
+  .own-listing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .own-listing-info {
+    min-height: 0;
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .own-listing-image img {
+    transition: none;
+  }
+}
+
+
+.own-listing-actions {
+  display: grid;
+  gap: 0;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+}
+
+.own-listing-actions .own-listing-buy {
+  min-height: 34px;
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 7px;
+}
+
+.own-listing-actions .own-listing-buy + .own-listing-buy {
+  border-top: 1px solid rgba(173, 139, 90, .18);
+}

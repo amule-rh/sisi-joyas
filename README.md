@@ -4,29 +4,30 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Estructura
 
-- `index.html`: portada y catálogo de trece recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
-- `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones.
-- `js/main.js`: idioma ES/EN, búsqueda, filtros y menú móvil.
-- `js/assistant.js`: asistente local de reglas que recomienda fichas y enlaza guías; procesa las consultas en el navegador y no llama a una API.
-- `assets/products/`: imágenes optimizadas de producto asociadas a las fichas oficiales de Miles Jewellery.
+- `index.html`: portada, catálogo con trece recomendaciones afiliadas, seis piezas propias únicas (ocho enlaces de plataforma) y acceso al asistente; los nombres, textos y enlaces principales están en el HTML.
+- `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones afiliadas.
+- `js/main.js`: idioma ES/EN, filtros del catálogo afiliado, textos y menú móvil.
+- `js/assistant.js`: asistente local de reglas que recomienda artículos afiliados y anuncios propios, y enlaza guías; procesa las consultas en el navegador y no llama a una API.
+- `assets/products/`: imágenes optimizadas de las fichas oficiales de Miles Jewellery.
+- `assets/own-listings/`: fotos optimizadas de anuncios de Vinted y Wallapop enlazados a sus fichas individuales.
 - `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: fotografías editoriales originales de la marca.
-- `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters generados del wordmark y el icono de gato; el sitio usa sus versiones optimizadas `sisi-logo-horizontal.webp` y `sisi-favicon.png`.
+- `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters del wordmark y el icono de gato; el sitio usa versiones optimizadas.
 - `blog.html` y `blog-*.html`: journal y guías.
 - `legal.html`, `privacy.html` y `cookies.html`: páginas legales que requieren revisión según los datos y la actividad reales.
 
-## Catálogo y afiliación
+## Catálogo y transparencia
 
-La portada permite filtrar por categoría y buscar por texto. Distingue el catálogo afiliado de los enlaces a los perfiles propios de Vinted y Wallapop. No se deben presentar como anuncios propios los artículos enlazados a Miles Jewellery.
+La portada separa visual y funcionalmente las recomendaciones afiliadas de Miles Jewellery y los artículos propios anunciados en Vinted y Wallapop. La vitrina muestra seis piezas únicas con ocho enlaces directos: dos artículos con fotos coincidentes se agrupan en una tarjeta con ambos enlaces. El precio y la disponibilidad se consultan en las plataformas y pueden cambiar. Los materiales se presentan como declaraciones de cada anuncio, no como una verificación independiente. Una ficha de anillo tiene una discrepancia visible entre el campo de material y su descripción; se advierte en la tarjeta.
 
-Para actualizar una recomendación, cambia en `js/products.js` el `id`, la categoría, la ruta de imagen y la URL de Awin, y conserva los parámetros de seguimiento. Mantén los IDs sincronizados con `data-product-id` en `index.html` y, cuando corresponda, con las recomendaciones de `js/assistant.js`. Deja el nombre y la descripción del artículo en el HTML para que sean visibles incluso sin JavaScript.
+Las fichas de Miles identifican a `Miles Jewellery` como proveedor y dirigen a su tienda. La divulgación de que algunos enlaces son afiliados de Awin permanece en los avisos generales y el pie de página.
 
-Comprueba cada destino en la tienda antes de editar sus materiales o variantes. No fijes un precio ni prometas disponibilidad en esta web: ambos pueden cambiar. Los colgantes de corazón y Hamsa pueden tener opciones de cadena distintas; la ficha de Hamsa indica que la cadena no está incluida.
+El catálogo afiliado permite filtrar por categoría y buscar por texto. Para actualizar una recomendación, cambia en `js/products.js` el `id`, la categoría, la ruta de imagen y la URL de Awin, y conserva los parámetros de seguimiento. Mantén los IDs sincronizados con `data-product-id` en `index.html` y las recomendaciones de `js/assistant.js`. Los enlaces afiliados deben conservar `rel="sponsored nofollow noopener noreferrer"` y la divulgación de Awin debe permanecer visible.
 
-Los enlaces de afiliación deben conservar `rel="sponsored nofollow noopener noreferrer"`. La divulgación de Awin aparece junto a la selección y en el pie de página.
+Al retirar anuncios vendidos o inactivos, actualiza también sus tarjetas y sus IDs en `js/assistant.js`. No conviertas las fichas propias en enlaces afiliados ni fijes un precio que pueda quedar obsoleto.
 
 ## Comprobaciones locales
 
-El sitio no necesita instalación. Desde la raíz del repositorio, puedes servirlo con `python3 -m http.server 8000` y abrir `http://localhost:8000`. Antes de guardar cambios, revisa `node --check js/main.js`, `node --check js/assistant.js` y `node --check js/products.js`, que las URL Awin mantengan sus parámetros y que las fotos correspondan a cada producto.
+El sitio no necesita instalación. Desde la raíz del repositorio, puedes servirlo con `python3 -m http.server 8000` y abrir `http://localhost:8000`. Antes de publicar, revisa `node --check js/main.js`, `node --check js/assistant.js` y `node --check js/products.js`, `git diff --check`, que cada ID del asistente exista en el HTML y que cada imagen cargue.
 
 ## Pendiente legal
 
