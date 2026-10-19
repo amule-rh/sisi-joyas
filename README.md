@@ -1,63 +1,32 @@
-# Sisi Joyas — web estática bilingüe
+# Sisi Joyas — web estática
 
-Web de joyería en HTML, CSS y JavaScript puro, preparada para GitHub Pages. No necesita Node, backend ni build.
+Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y publicado bajo `sisijoyas.store`. No requiere backend, dependencias ni proceso de build.
 
-## Actualización visual
-- Fondo editorial marfil con reflejos de luz lentos y discretos, sin destellos artificiales invasivos.
-- Interacciones suaves, respeto por `prefers-reduced-motion` y diseño responsive.
-- Dominio personalizado configurado en el archivo `CNAME` para `sisijoyas.store`.
+## Estructura
 
-## Contenido
-- `index.html`: inicio y catálogo filtrable.
-- `blog.html` y `blog-*.html`: artículos SEO con enlaces afiliados separados del catálogo propio.
-- `css/styles.css`: diseño responsive.
-- `js/products.js`: catálogo propio editable y enlaces Awin.
-- `js/main.js`: filtros e idioma ES/EN.
-- `assets/`: logo SVG, favicon y portada Open Graph.
-- `legal.html`, `privacy.html`, `cookies.html`: borradores que debes completar/revisar.
+- `index.html`: portada y cinco recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
+- `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones.
+- `js/main.js`: idioma ES/EN, filtros y menú móvil.
+- `assets/products/`: imágenes optimizadas de producto asociadas a las fichas oficiales de Miles Jewellery.
+- `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: fotografías editoriales originales de la marca.
+- `assets/sisi-logo.svg` y `assets/favicon.svg`: marca e icono del sitio.
+- `blog.html` y `blog-*.html`: journal y guías.
+- `legal.html`, `privacy.html` y `cookies.html`: páginas legales que requieren revisión según los datos y la actividad reales.
 
-## 1. Crear el repositorio
-1. Entra en https://github.com/new.
-2. Crea un repositorio público llamado `sisi-joyas` (o el nombre que prefieras).
-3. Selecciona `Add a README file` o deja el repositorio vacío.
-4. Sube el contenido de esta carpeta a la raíz del repositorio; `index.html` debe quedar en la raíz, no dentro de otra carpeta.
+## Catálogo y afiliación
 
-## 2. Subir archivos
-En GitHub: **Add file → Upload files**, arrastra todos los archivos y carpetas, escribe `Create Sisi website` como mensaje y pulsa **Commit changes**. Para futuras actualizaciones, repite el proceso o utiliza Git y haz `git push`.
+La portada distingue el bloque **Selección afiliada** de los enlaces a los perfiles propios de Vinted y Wallapop. No se deben presentar como anuncios propios los artículos enlazados a Miles Jewellery.
 
-## 3. Activar GitHub Pages
-1. Abre el repositorio → **Settings → Pages**.
-2. En **Build and deployment**, selecciona **Deploy from a branch**.
-3. Selecciona `main` y la carpeta `/(root)`.
-4. Pulsa **Save**. Espera a que termine la publicación.
-5. La URL será `https://TU-USUARIO.github.io/sisi-joyas/` (sustituye TU-USUARIO por tu nombre de GitHub). No se puede confirmar la URL final hasta crear el repositorio.
+Para actualizar una recomendación, cambia en `js/products.js` el `id`, la categoría, la ruta de imagen y la URL de Awin, y conserva los parámetros de seguimiento. Mantén los IDs sincronizados con `data-product-id` en `index.html`. Deja el nombre y la descripción del artículo en el HTML para que sean visibles incluso sin JavaScript.
 
-## 4. Conectar el dominio sisijoyas.store
+Comprueba cada destino en la tienda antes de editar sus materiales o variantes. No fijes un precio ni prometas disponibilidad en esta web: ambos pueden cambiar. Los colgantes de corazón y Hamsa pueden tener opciones de cadena distintas; la ficha de Hamsa indica que la cadena no está incluida.
 
-El archivo `CNAME` ya incluye `sisijoyas.store`. En GitHub abre **Settings → Pages → Custom domain**, escribe `sisijoyas.store` y guarda. En el panel DNS del proveedor del dominio, configura los registros A de la raíz con las IP oficiales actuales de GitHub Pages y un CNAME para `www` apuntando a `amule-rh.github.io` (si el repositorio sigue en esa cuenta). Consulta la guía oficial de GitHub Pages antes de guardar DNS: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site. Activa **Enforce HTTPS** cuando aparezca disponible. No elimines otros registros de correo que utilices.
+Los enlaces de afiliación deben conservar `rel="sponsored nofollow noopener noreferrer"`. La divulgación de Awin aparece junto a la selección y en el pie de página.
 
-## 5. Editar el catálogo
-Abre `js/products.js`. Cada artículo tiene `id`, `category`, `status`, `name`, `description`, `price`, `image`, `marketplace` y `url`.
-- Categorías admitidas: `rings`, `earrings`, `necklaces`, `bracelets`.
-- Cuando vendas una pieza, cambia `status:"active"` por `status:"sold"` o elimina la entrada.
-- Sustituye nombres, descripciones, precios, fotos y URLs de perfil por el anuncio individual real.
-- Si `price` es `null`, se muestra “Precio por añadir”. No publiques tarjetas de ejemplo como si fueran artículos disponibles: reemplaza o elimina las cuatro entradas de demostración antes de lanzar.
-- Para añadir una pieza, copia un objeto existente, asigna un `id` único y añade una coma entre objetos.
-- El enlace de compra debe apuntar al anuncio individual, no solo al perfil.
+## Comprobaciones locales
 
-## 6. Afiliados Awin
-Los enlaces de Miles Jewellery están en `window.SISI_AFFILIATES` dentro de `js/products.js` y en los artículos del blog. Conserva los parámetros de tracking. Los enlaces deben llevar `rel="sponsored nofollow noopener"` cuando corresponda. No insertes productos afiliados dentro del catálogo propio.
-Los enlaces de La Joya Jewelry aún no se han proporcionado; añádelos solo cuando tengas las URL de tracking generadas en Awin.
+El sitio no necesita instalación. Desde la raíz del repositorio, puedes servirlo con `python3 -m http.server 8000` y abrir `http://localhost:8000`. Antes de guardar cambios, revisa que las URL Awin mantengan sus parámetros, que las fotos correspondan a cada producto y que las rutas de `sitemap.xml` sigan siendo correctas.
 
-## 7. Antes de publicar (imprescindible)
-- Completa los marcadores de `legal.html`, `privacy.html` y revisa `cookies.html` según tu actividad real.
-- Sustituye los productos de ejemplo por anuncios reales; no inventes precios, medidas, disponibilidad ni especificaciones de metal.
-- Confirma que tienes derechos para usar las fotos. Las fotos remotas de demostración pueden no representar tus artículos; cámbialas por fotos propias/autorizadas.
-- Añade tu dominio en los metadatos si lo compras y crea `sitemap.xml` con la URL definitiva.
-- Comprueba todos los enlaces desde móvil y escritorio.
+## Pendiente legal
 
-## 8. Idiomas
-El botón `ES / EN` cambia los textos de interfaz. El contenido editorial del blog de esta primera versión está en español; las traducciones completas de cada artículo pueden añadirse en una segunda iteración.
-
-## 9. Imágenes y rendimiento
-La plantilla usa imágenes remotas de demostración y Google Fonts. Para máxima velocidad y control, sustituye por fotos optimizadas WebP/AVIF alojadas en `assets/` y fuentes locales con licencia adecuada.
+`legal.html` conserva marcadores para los datos de titular y contacto, y `privacy.html` / `cookies.html` son borradores. Completa y revisa esas páginas según tu situación real antes de considerar que los textos legales están terminados.

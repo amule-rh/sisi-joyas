@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="32" fill="#f7f3ed"/><path d="M14 18L18 28L28 32L18 36L14 46L10 36L0 32L10 28Z" transform="translate(8 0)" fill="none" stroke="#a58a60" stroke-width="1.5"/><text x="33" y="43" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#292822">s</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Sisi Joyas</title>
+  <rect width="64" height="64" rx="32" fill="#faf8f4"/>
+  <path d="M14 19h20l7 11-17 24L7 30z" fill="none" stroke="#ad8b5a" stroke-linejoin="round" stroke-width="1.5"/>
+  <path d="m7 30 17 24 17-24M14 19l10 35 10-35M7 30h34" fill="none" stroke="#ad8b5a" stroke-linejoin="round" stroke-width=".85" opacity=".8"/>
+  <path d="m48 8 2.3 5.7L56 16l-5.7 2.3L48 24l-2.3-5.7L40 16l5.7-2.3z" fill="#ad8b5a"/>
+</svg>

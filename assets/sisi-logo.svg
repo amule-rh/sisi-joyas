@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 90" role="img" aria-labelledby="t d"><title id="t">Sisi</title><desc id="d">Logotipo Sisi con destello minimalista</desc><g fill="none" stroke="#292822" stroke-width="1.5"><path d="M22 14 L26 25 L37 29 L26 33 L22 44 L18 33 L7 29 L18 25 Z" stroke="#a58a60"/><path d="M22 19V39M12 29H32" stroke-width=".8"/></g><text x="49" y="48" font-family="Georgia,serif" font-size="43" letter-spacing="1" fill="#292822">sisi</text><path d="M50 59H143" stroke="#a58a60" stroke-width="1"/><text x="50" y="73" font-family="Arial,sans-serif" font-size="8" letter-spacing="3.2" fill="#77736c">JOYAS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 96" role="img" aria-labelledby="title desc">
+  <title id="title">Sisi Joyas</title>
+  <desc id="desc">Logotipo de Sisi Joyas con una gema facetada minimalista y una firma en serif.</desc>
+  <g fill="none" stroke="#ad8b5a" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 18h24l8 14-20 29-20-29z" stroke-width="1.6"/>
+    <path d="m13 32 20 29 20-29M21 18l12 43 12-43M13 32h40" stroke-width=".9" opacity=".75"/>
+    <path d="m58 16 3.4 8.6L70 28l-8.6 3.4L58 40l-3.4-8.6L46 28l8.6-3.4z" fill="#faf8f4" stroke-width="1.1"/>
+  </g>
+  <text x="79" y="55" fill="#292722" font-family="Georgia, 'Times New Roman', serif" font-size="49" letter-spacing="-.8">sisi</text>
+  <path d="M81 67h93" stroke="#ad8b5a" stroke-width="1"/>
+  <text x="81" y="82" fill="#77716a" font-family="Arial, Helvetica, sans-serif" font-size="8" letter-spacing="4.1">JOYAS</text>
+</svg>

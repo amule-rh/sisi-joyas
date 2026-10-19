@@ -1,11 +1,237 @@
-const I18N={
-es:{announcement:"Brillo extraordinario, estilo para cada día",nav_shop:"Comprar",nav_journal:"Journal",nav_story:"Nuestra esencia",nav_discover:"Descubrir",hero_eyebrow:"LA LUZ, EN SU FORMA MÁS PERSONAL",hero_title:"Moissanita.<br><em>Brillo sin límites.</em>",hero_text:"Piezas luminosas para acompañarte todos los días. Descubre una forma más consciente de elegir el brillo que va contigo.",hero_cta:"Descubrir las joyas",hero_note:"Selección propia · Plata 925 cuando se indica en cada anuncio",hero_caption:"EL ARTE DEL DETALLE",trust_1:"Diseño atemporal",trust_2:"Piezas seleccionadas",trust_3:"Compra en marketplaces seguros",catalog_eyebrow:"LA SELECCIÓN SISI",catalog_title:"Encuentra tu brillo",catalog_intro:"Cada pieza tiene su propia historia. Explora el catálogo y compra directamente en nuestros perfiles.",filter_all:"Todo",filter_rings:"Anillos",filter_earrings:"Pendientes",filter_necklaces:"Collares",filter_bracelets:"Pulseras",filter_price:"Precio máximo",empty_catalog:"No hay piezas disponibles con estos filtros. Vuelve pronto.",market_eyebrow:"ENCUÉNTRANOS TAMBIÉN AQUÍ",market_title:"Tu próxima joya te espera",about_eyebrow:"MENOS, PERO MEJOR",about_title:"La belleza está<br><em>en lo que eliges.</em>",about_text:"Sisi nace para celebrar los pequeños detalles: una luz que te acompaña, una pieza que habla de ti y una elección que se siente propia.",about_link:"Leer el journal",quote:"El brillo más bonito es el que eliges para ti.",footer_tagline:"Joyería elegida con intención.",footer_explore:"Explora",footer_market:"Nuestros perfiles",affiliate_title:"Transparencia",affiliate_text:"Algunos enlaces de este sitio son enlaces de afiliación. Si compras a través de ellos, Sisi puede recibir una comisión sin coste adicional para ti. Las recomendaciones afiliadas se distinguen de nuestro catálogo propio.",legal_notice:"Aviso legal",privacy:"Privacidad",cookies:"Cookies",footer_made:"Hecho con cuidado.",buy:"Ver anuncio",placeholder:"Precio por añadir",sample:"Ejemplo — sustituir por producto real",rings:"Anillos",earrings:"Pendientes",necklaces:"Collares",bracelets:"Pulseras",blog_title:"El journal Sisi",blog_intro:"Ideas, materiales y guías para elegir joyas con criterio.",read:"Leer artículo",affiliate_disclosure:"Enlace publicitario / afiliado",back_blog:"Volver al journal",price_all:"Todos"},
-en:{announcement:"Extraordinary sparkle, everyday style",nav_shop:"Shop",nav_journal:"Journal",nav_story:"Our story",nav_discover:"Discover",hero_eyebrow:"LIGHT, IN ITS MOST PERSONAL FORM",hero_title:"Moissanite.<br><em>Brilliance without limits.</em>",hero_text:"Luminous pieces to accompany you every day. Discover a more considered way to choose the sparkle that feels like you.",hero_cta:"Discover the pieces",hero_note:"Own selection · 925 silver where stated in each listing",hero_caption:"THE ART OF DETAIL",trust_1:"Timeless design",trust_2:"Thoughtfully selected",trust_3:"Shop through trusted marketplaces",catalog_eyebrow:"THE SISI EDIT",catalog_title:"Find your sparkle",catalog_intro:"Every piece has its own story. Explore the edit and shop directly through our profiles.",filter_all:"All",filter_rings:"Rings",filter_earrings:"Earrings",filter_necklaces:"Necklaces",filter_bracelets:"Bracelets",filter_price:"Max price",empty_catalog:"No pieces match these filters. Please check back soon.",market_eyebrow:"FIND US HERE TOO",market_title:"Your next favourite piece awaits",about_eyebrow:"LESS, BUT BETTER",about_title:"Beauty lies<br><em>in what you choose.</em>",about_text:"Sisi celebrates the little details: a light that stays with you, a piece that speaks of you, and a choice that feels personal.",about_link:"Read the journal",quote:"The most beautiful sparkle is the one you choose for yourself.",footer_tagline:"Jewellery chosen with intention.",footer_explore:"Explore",footer_market:"Our profiles",affiliate_title:"Transparency",affiliate_text:"Some links on this website are affiliate links. If you buy through them, Sisi may earn a commission at no extra cost to you. Affiliate recommendations are kept separate from our own catalogue.",legal_notice:"Legal notice",privacy:"Privacy",cookies:"Cookies",footer_made:"Made with care.",buy:"View listing",placeholder:"Price to be added",sample:"Example — replace with real item",rings:"Rings",earrings:"Earrings",necklaces:"Necklaces",bracelets:"Bracelets",blog_title:"The Sisi journal",blog_intro:"Materials, ideas and guides to help you choose jewellery with confidence.",read:"Read article",affiliate_disclosure:"Advertising / affiliate link",back_blog:"Back to journal",price_all:"All"}
+const I18N = {
+  es: {
+    announcement: "Joyería seleccionada con luz, detalle y transparencia",
+    nav_shop: "Selección",
+    nav_journal: "Journal",
+    nav_story: "Nuestra esencia",
+    nav_discover: "Descubrir",
+    hero_eyebrow: "LA LUZ, EN SU FORMA MÁS PERSONAL",
+    hero_title: "Moissanita.<br><em>Brillo sin límites.</em>",
+    hero_text: "Una selección de piezas luminosas para acompañarte cada día. Compara materiales y variantes en la tienda, y descubre por separado los anuncios propios de Sisi.",
+    hero_cta: "Explorar la selección",
+    hero_note: "Recomendaciones afiliadas y perfiles propios, siempre diferenciados.",
+    hero_caption: "EL ARTE DEL DETALLE",
+    trust_1: "Fotos oficiales de producto",
+    trust_2: "Detalles revisados en tienda",
+    trust_3: "Enlaces afiliados identificados",
+    catalog_eyebrow: "SISI / SELECCIÓN AFILIADA",
+    catalog_title: "Piezas con luz propia",
+    catalog_intro: "Cinco artículos de Miles Jewellery con fichas e imágenes oficiales activas. En la tienda puedes confirmar el precio, la disponibilidad y las opciones antes de comprar.",
+    affiliate_inline: "Publicidad · Algunos enlaces son afiliados de Awin. Si compras a través de ellos, Sisi puede recibir una comisión sin coste adicional para ti. La venta se realiza en Miles Jewellery.",
+    filter_all: "Todo",
+    filter_pendants: "Collares y colgantes",
+    filter_bracelets: "Pulseras",
+    empty_catalog: "No hay piezas en esta categoría.",
+    affiliate_product_tag: "Enlace afiliado · Awin",
+    category_pendants: "Collares y colgantes",
+    category_bracelets: "Pulseras",
+    product_tennis_name: "Pulsera tennis de moissanita 2–6 mm",
+    product_tennis_specs: "Plata 925 rodiada · anchos de 2 a 6 mm · varias longitudes.",
+    product_cross_name: "Collar con cruz de moissanita",
+    product_cross_specs: "Plata 925 · acabados plata u oro · dos tamaños.",
+    product_heart_name: "Colgante corazón de moissanita",
+    product_heart_specs: "Plata 925 · varios acabados · comprueba las opciones de cadena.",
+    product_cross2_name: "Cruz de moissanita de 2 mm",
+    product_cross2_specs: "Colgante de plata 925 rodiada · cadena compatible seleccionable.",
+    product_hamsa_name: "Colgante Mano Hamsa de moissanita",
+    product_hamsa_specs: "Plata 925 · tres acabados · la cadena no está incluida.",
+    price_at_shop: "Precio y opciones en tienda",
+    product_cta: "Ver en Miles Jewellery",
+    market_eyebrow: "PIEZAS PROPIAS DE SISI",
+    market_title: "Encuéntranos también aquí",
+    market_text: "Consulta qué está disponible ahora en nuestros perfiles de Vinted y Wallapop.",
+    about_eyebrow: "MENOS, PERO MEJOR",
+    about_title: "La belleza está<br><em>en lo que eliges.</em>",
+    about_text: "Sisi reúne piezas luminosas con información clara: lo que recomendamos en tiendas externas no se confunde con los anuncios propios de nuestros perfiles.",
+    about_link: "Leer el journal",
+    quote: "El brillo más bonito es el que eliges para ti.",
+    footer_tagline: "Joyería elegida con intención.",
+    footer_explore: "Explora",
+    footer_market: "Nuestros perfiles",
+    affiliate_title: "Publicidad y transparencia",
+    affiliate_text: "Algunos enlaces de Miles Jewellery son enlaces afiliados de Awin. Si compras desde ellos, Sisi puede recibir una comisión sin coste adicional para ti. Los precios y condiciones se consultan en la tienda. Las recomendaciones afiliadas se distinguen de los anuncios propios.",
+    legal_notice: "Aviso legal",
+    privacy: "Privacidad",
+    cookies: "Cookies",
+    footer_made: "Hecho con cuidado.",
+    blog_title: "El journal Sisi",
+    blog_intro: "Ideas, materiales y guías para elegir joyas con criterio.",
+    read: "Leer artículo",
+    affiliate_disclosure: "Publicidad / enlace afiliado",
+    back_blog: "Volver al journal"
+  },
+  en: {
+    announcement: "Thoughtfully selected jewellery, with clarity and care",
+    nav_shop: "The edit",
+    nav_journal: "Journal",
+    nav_story: "Our story",
+    nav_discover: "Discover",
+    hero_eyebrow: "LIGHT, IN ITS MOST PERSONAL FORM",
+    hero_title: "Moissanite.<br><em>Brilliance without limits.</em>",
+    hero_text: "A considered edit of luminous pieces for every day. Compare materials and options at the retailer, and browse Sisi's own listings separately.",
+    hero_cta: "Explore the edit",
+    hero_note: "Affiliate recommendations and Sisi's own profiles are clearly separated.",
+    hero_caption: "THE ART OF DETAIL",
+    trust_1: "Official product photos",
+    trust_2: "Details checked at the retailer",
+    trust_3: "Affiliate links clearly labelled",
+    catalog_eyebrow: "SISI / AFFILIATE EDIT",
+    catalog_title: "Pieces with their own light",
+    catalog_intro: "Five Miles Jewellery products with active official listings and product images. Check current prices, availability and options with the retailer before buying.",
+    affiliate_inline: "Advertising · Some links are Awin affiliate links. If you buy through them, Sisi may earn a commission at no extra cost to you. Sales are completed at Miles Jewellery.",
+    filter_all: "All",
+    filter_pendants: "Necklaces & pendants",
+    filter_bracelets: "Bracelets",
+    empty_catalog: "There are no pieces in this category.",
+    affiliate_product_tag: "Affiliate link · Awin",
+    category_pendants: "Necklaces & pendants",
+    category_bracelets: "Bracelets",
+    product_tennis_name: "2–6 mm moissanite tennis bracelet",
+    product_tennis_specs: "Rhodium-plated 925 silver · 2–6 mm widths · multiple lengths.",
+    product_cross_name: "Moissanite cross necklace",
+    product_cross_specs: "925 silver · silver or gold finish · two sizes.",
+    product_heart_name: "Moissanite heart pendant",
+    product_heart_specs: "925 silver · multiple finishes · check the chain options.",
+    product_cross2_name: "2 mm moissanite cross",
+    product_cross2_specs: "Rhodium-plated 925 silver pendant · compatible chain options.",
+    product_hamsa_name: "Moissanite Hamsa hand pendant",
+    product_hamsa_specs: "925 silver · three finishes · chain not included.",
+    price_at_shop: "Price and options at retailer",
+    product_cta: "View at Miles Jewellery",
+    market_eyebrow: "SISI'S OWN LISTINGS",
+    market_title: "Find us here too",
+    market_text: "Check our Vinted and Wallapop profiles to see what is currently available.",
+    about_eyebrow: "LESS, BUT BETTER",
+    about_title: "Beauty lies<br><em>in what you choose.</em>",
+    about_text: "Sisi brings together luminous pieces and clear information: recommendations from external shops stay distinct from listings on our own profiles.",
+    about_link: "Read the journal",
+    quote: "The most beautiful sparkle is the one you choose for yourself.",
+    footer_tagline: "Jewellery chosen with intention.",
+    footer_explore: "Explore",
+    footer_market: "Our profiles",
+    affiliate_title: "Advertising & transparency",
+    affiliate_text: "Some Miles Jewellery links are Awin affiliate links. If you buy through them, Sisi may earn a commission at no extra cost to you. Prices and terms are set by the retailer. Affiliate recommendations are kept separate from our own listings.",
+    legal_notice: "Legal notice",
+    privacy: "Privacy",
+    cookies: "Cookies",
+    footer_made: "Made with care.",
+    blog_title: "The Sisi journal",
+    blog_intro: "Materials, ideas and guides to help you choose jewellery with confidence.",
+    read: "Read article",
+    affiliate_disclosure: "Advertising / affiliate link",
+    back_blog: "Back to the journal"
+  }
 };
-let lang=localStorage.getItem("sisi-lang")||"es";
-function t(k){return (I18N[lang]&&I18N[lang][k])||I18N.es[k]||k}
-function applyLang(){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let k=el.dataset.i18n;if(I18N[lang][k])el.innerHTML=I18N[lang][k]});document.querySelectorAll("#lang-toggle").forEach(b=>b.textContent=lang==="es"?"ES / EN":"EN / ES");renderProducts();if(document.querySelector("[data-blog-title]")){document.querySelector("[data-blog-title]").textContent=t("blog_title");document.querySelector("[data-blog-intro]").textContent=t("blog_intro")}}
-function productCard(p){const name=p.name[lang]||p.name.es,desc=p.description[lang]||p.description.es,cat=t(p.category);return `<article class="product-card"><a class="product-image" href="${p.url}" target="_blank" rel="noopener noreferrer"><img src="${p.image}" alt="${name}" loading="lazy"><span class="product-tag">${p.label?.[lang]||t("sample")}</span></a><div class="product-info"><span class="product-category">${cat}</span><h3>${name}</h3><p class="product-desc">${desc}</p><div class="product-bottom"><span class="product-price">${p.price==null?t("placeholder"):new Intl.NumberFormat(lang==="es"?"es-ES":"en-GB",{style:"currency",currency:p.currency||"EUR"}).format(p.price)}</span><a class="product-buy" href="${p.url}" target="_blank" rel="noopener noreferrer">${t("buy")} ↗</a></div></div></article>`}
-let category="all";
-function renderProducts(){const grid=document.querySelector("#product-grid");if(!grid||!window.SISI_PRODUCTS)return;const max=Number(document.querySelector("#max-price")?.value||9999);const items=window.SISI_PRODUCTS.filter(p=>p.status==="active"&&(category==="all"||p.category===category)&&(p.price==null||p.price<=max));grid.innerHTML=items.map(productCard).join("");const empty=document.querySelector("#empty-state");if(empty)empty.hidden=items.length>0}
-document.addEventListener("DOMContentLoaded",()=>{applyLang();document.querySelector("#year")&&(document.querySelector("#year").textContent=new Date().getFullYear());document.querySelector("#lang-toggle")?.addEventListener("click",()=>{lang=lang==="es"?"en":"es";localStorage.setItem("sisi-lang",lang);applyLang()});document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");category=b.dataset.category;renderProducts()}));document.querySelector("#max-price")?.addEventListener("change",renderProducts);document.querySelector("#menu-toggle")?.addEventListener("click",()=>{const nav=document.querySelector(".desktop-nav");if(nav){nav.style.display=nav.style.display==="flex"?"none":"flex";nav.style.position="absolute";nav.style.top="100px";nav.style.left="0";nav.style.right="0";nav.style.zIndex="5";nav.style.background="var(--paper)";nav.style.padding="24px";nav.style.flexDirection="column"}})});
+
+let lang = "es";
+try {
+  lang = localStorage.getItem("sisi-lang") === "en" ? "en" : "es";
+} catch (_) {
+  lang = "es";
+}
+
+function t(key) {
+  return I18N[lang][key] || I18N.es[key] || key;
+}
+
+function applyAffiliateData() {
+  if (!Array.isArray(window.SISI_AFFILIATES)) return;
+
+  const products = new Map(window.SISI_AFFILIATES.map((product) => [product.id, product]));
+  document.querySelectorAll("[data-affiliate-card]").forEach((card) => {
+    const product = products.get(card.dataset.productId);
+    if (!product) return;
+
+    const image = card.querySelector(".product-image img");
+    if (image) image.src = product.image;
+
+    card.querySelectorAll("[data-affiliate-link]").forEach((link) => {
+      link.href = product.url;
+      link.target = "_blank";
+      link.rel = "sponsored nofollow noopener noreferrer";
+    });
+  });
+}
+
+function applyFilters(category) {
+  const selected = category || document.querySelector(".filter.active")?.dataset.category || "all";
+  let visibleCount = 0;
+
+  document.querySelectorAll("[data-affiliate-card]").forEach((card) => {
+    const visible = selected === "all" || card.dataset.category === selected;
+    card.hidden = !visible;
+    if (visible) visibleCount += 1;
+  });
+
+  const emptyState = document.querySelector("#empty-state");
+  if (emptyState) emptyState.hidden = visibleCount > 0;
+
+  document.querySelectorAll(".filter").forEach((button) => {
+    const active = button.dataset.category === selected;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function applyLang() {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const value = t(element.dataset.i18n);
+    if (value) element.innerHTML = value;
+  });
+
+  document.querySelectorAll("[data-alt-es][data-alt-en]").forEach((image) => {
+    image.alt = lang === "es" ? image.dataset.altEs : image.dataset.altEn;
+  });
+
+  document.querySelectorAll("#lang-toggle").forEach((button) => {
+    button.textContent = lang === "es" ? "ES / EN" : "EN / ES";
+    button.setAttribute("aria-label", lang === "es" ? "Cambiar a inglés" : "Switch to Spanish");
+  });
+
+  const blogTitle = document.querySelector("[data-blog-title]");
+  const blogIntro = document.querySelector("[data-blog-intro]");
+  if (blogTitle) blogTitle.textContent = t("blog_title");
+  if (blogIntro) blogIntro.textContent = t("blog_intro");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  applyAffiliateData();
+  applyLang();
+  applyFilters();
+
+  const year = document.querySelector("#year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  document.querySelector("#lang-toggle")?.addEventListener("click", () => {
+    lang = lang === "es" ? "en" : "es";
+    try {
+      localStorage.setItem("sisi-lang", lang);
+    } catch (_) {
+      // The page still works when browser storage is unavailable.
+    }
+    applyLang();
+  });
+
+  document.querySelectorAll(".filter").forEach((button) => {
+    button.addEventListener("click", () => applyFilters(button.dataset.category));
+  });
+
+  const menuButton = document.querySelector("#menu-toggle");
+  const navigation = document.querySelector("#primary-navigation");
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+});
