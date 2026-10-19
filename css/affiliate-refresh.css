@@ -154,6 +154,47 @@
   display: none;
 }
 
+.catalog-guide {
+  margin: 50px 0 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.catalog-guide h3 {
+  margin: 7px 0 22px;
+  font: 400 clamp(25px, 3vw, 34px)/1.2 var(--serif);
+}
+
+.catalog-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.catalog-guide-grid article {
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+}
+
+.catalog-guide-grid h4 {
+  margin: 0 0 7px;
+  font: 400 19px/1.35 var(--serif);
+}
+
+.catalog-guide-grid p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.catalog-guide-grid a {
+  border-bottom: 1px solid var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
 .marketplace-cta {
   align-items: center;
   background: rgba(255, 254, 250, 0.7);
@@ -228,6 +269,15 @@
 
   .brand img {
     width: 98px;
+  }
+
+  .catalog-guide {
+    padding: 24px 20px;
+  }
+
+  .catalog-guide-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
   }
 
   .product-grid {
