@@ -1,8 +1,9 @@
 /* Sisi affiliate edit: clear attribution, product-first photography and responsive cards. */
 .brand img {
   display: block;
-  width: 108px;
+  width: 138px;
   height: auto;
+  object-fit: contain;
 }
 
 .hero-art {
@@ -43,7 +44,7 @@
 }
 
 .product-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
   gap: 22px 16px;
 }
@@ -172,7 +173,7 @@
 
 .footer-brand {
   display: block;
-  width: 96px;
+  width: 130px;
   height: auto;
 }
 
@@ -223,6 +224,10 @@
 
   .bag-link {
     display: none;
+  }
+
+  .brand img {
+    width: 98px;
   }
 
   .product-grid {

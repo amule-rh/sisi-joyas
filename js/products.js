@@ -38,5 +38,33 @@ window.SISI_AFFILIATES = [
     merchant: "Miles Jewellery",
     image: "assets/products/miles-hamsa-pendant.webp",
     url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2Fmoissanite-hamsa-pendant-925-silver"
+  },
+  {
+    id: "miles-earrings-stud-3mm",
+    category: "earrings",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-stud-earrings-3mm.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2F3mm-round-cut-moissanite-stud-earrings"
+  },
+  {
+    id: "miles-ring-tennis-3mm",
+    category: "rings",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-tennis-ring-3mm.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2F3mm-moissanite-tennis-chain-ring"
+  },
+  {
+    id: "miles-bracelet-star-8mm",
+    category: "bracelets",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-star-bracelet-8mm.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2F8mm-moissanite-star-tennis-bracelet"
+  },
+  {
+    id: "miles-cross-gold-iced",
+    category: "pendants",
+    merchant: "Miles Jewellery",
+    image: "assets/products/miles-cross-gold-moissanite.webp",
+    url: "https://www.awin1.com/cread.php?awinmid=129311&awinaffid=3099234&ued=https%3A%2F%2Fmilesjewellery.com%2Fproducts%2Fmoissanite-cross-pendant-925-silver"
   }
 ];

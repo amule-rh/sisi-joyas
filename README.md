@@ -4,12 +4,12 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Estructura
 
-- `index.html`: portada y cinco recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
+- `index.html`: portada y nueve recomendaciones afiliadas; los nombres, materiales y enlaces están presentes en el HTML inicial.
 - `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones.
 - `js/main.js`: idioma ES/EN, filtros y menú móvil.
 - `assets/products/`: imágenes optimizadas de producto asociadas a las fichas oficiales de Miles Jewellery.
 - `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: fotografías editoriales originales de la marca.
-- `assets/sisi-logo.svg` y `assets/favicon.svg`: marca e icono del sitio.
+- `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters generados del wordmark y el icono de gato; el sitio usa sus versiones optimizadas `sisi-logo-horizontal.webp` y `sisi-favicon.png`.
 - `blog.html` y `blog-*.html`: journal y guías.
 - `legal.html`, `privacy.html` y `cookies.html`: páginas legales que requieren revisión según los datos y la actividad reales.
 
