@@ -4,9 +4,12 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Estructura
 
-- `index.html`: portada, catálogo con trece recomendaciones afiliadas, seis piezas propias únicas (ocho enlaces de plataforma) y acceso al asistente; los nombres, textos y enlaces principales están en el HTML.
+- `index.html`: portada con rutas separadas, seis destacados, catálogo filtrable, opiniones enlazadas de Vinted, FAQ y asistente local.
+- `pendientes-moissanita.html`, `anillos-moissanita.html`, `pulseras-moissanita.html` y `collares-colgantes-moissanita.html`: páginas estáticas de categoría con texto útil y fichas afiliadas del grupo correspondiente.
+- `piezas-de-sisi.html`: escaparate de las seis piezas propias y enlace a las valoraciones del perfil de Vinted.
+- `css/ux-redesign.css`: jerarquía visual responsive, navegación, categorías, FAQ, prueba social y componentes editoriales.
 - `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones afiliadas.
-- `js/main.js`: idioma ES/EN, filtros del catálogo afiliado, textos y menú móvil.
+- `js/main.js`: idioma ES/EN, filtros y búsqueda del catálogo, traducciones, navegación móvil y textos.
 - `js/assistant.js`: asistente local de reglas que recomienda artículos afiliados y anuncios propios, y enlaza guías; procesa las consultas en el navegador y no llama a una API.
 - `assets/products/`: imágenes optimizadas de las fichas oficiales de Miles Jewellery.
 - `assets/own-listings/`: fotos optimizadas de anuncios de Vinted y Wallapop enlazados a sus fichas individuales.
@@ -14,10 +17,11 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 - `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters del wordmark y el icono de gato; el sitio usa versiones optimizadas.
 - `blog.html` y `blog-*.html`: journal y guías.
 - `legal.html`, `privacy.html` y `cookies.html`: páginas legales que requieren revisión según los datos y la actividad reales.
+- `sitemap.xml`: portada, escaparate propio, categorías y guías indexables del dominio.
 
 ## Catálogo y transparencia
 
-La portada separa visual y funcionalmente las recomendaciones afiliadas de Miles Jewellery y los artículos propios anunciados en Vinted y Wallapop. La vitrina muestra seis piezas únicas con ocho enlaces directos: dos artículos con fotos coincidentes se agrupan en una tarjeta con ambos enlaces. El precio y la disponibilidad se consultan en las plataformas y pueden cambiar. Los materiales se presentan como declaraciones de cada anuncio, no como una verificación independiente. Una ficha de anillo tiene una discrepancia visible entre el campo de material y su descripción; se advierte en la tarjeta.
+La portada y las páginas de categoría separan visual y funcionalmente las recomendaciones afiliadas de Miles Jewellery y los artículos propios anunciados en Vinted y Wallapop. La home destaca seis fichas; el filtro Todo mantiene acceso a las trece recomendaciones. La vitrina muestra seis piezas únicas con ocho enlaces directos: dos artículos con fotos coincidentes se agrupan en una tarjeta con ambos enlaces. El precio y la disponibilidad se consultan en las plataformas y pueden cambiar. Los materiales se presentan como declaraciones de cada anuncio, no como una verificación independiente. Una ficha de anillo tiene una discrepancia visible entre el campo de material y su descripción; se advierte en la tarjeta.
 
 Las fichas de Miles identifican a `Miles Jewellery` como proveedor y dirigen a su tienda. La divulgación de que algunos enlaces son afiliados de Awin permanece en los avisos generales y el pie de página.
 
@@ -32,3 +36,6 @@ El sitio no necesita instalación. Desde la raíz del repositorio, puedes servir
 ## Pendiente legal
 
 `legal.html` conserva marcadores para los datos de titular y contacto, y `privacy.html` / `cookies.html` son borradores. Completa y revisa esas páginas según tu situación real antes de considerar que los textos legales están terminados.
+
+
+En la consulta pública del perfil de Vinted del 22 de octubre de 2026 aparecían 51 valoraciones. La web muestra el recuento con fecha y un enlace a la fuente; no las presenta como reseñas de los productos afiliados ni inventa una puntuación media. Actualiza el recuento y la fecha cuando lo revises.
