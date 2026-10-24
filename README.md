@@ -4,16 +4,16 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Estructura
 
-- `index.html`: portada con rutas separadas, seis destacados, catálogo filtrable, opiniones enlazadas de Vinted, FAQ y asistente local.
+- `index.html`: portada con rutas separadas, seis destacados afiliados, catálogo filtrable, siete anuncios propios, opiniones enlazadas de Vinted, FAQ y asistente local.
 - `pendientes-moissanita.html`, `anillos-moissanita.html`, `pulseras-moissanita.html` y `collares-colgantes-moissanita.html`: páginas estáticas de categoría con texto útil y fichas afiliadas del grupo correspondiente.
-- `piezas-de-sisi.html`: escaparate de las seis piezas propias y enlace a las valoraciones del perfil de Vinted.
+- `piezas-de-sisi.html`: escaparate de las siete piezas propias y enlace a las valoraciones del perfil de Vinted.
 - `css/ux-redesign.css`: jerarquía visual responsive, navegación, categorías, FAQ, prueba social y componentes editoriales.
 - `js/products.js`: identificadores, destinos Awin e imágenes de las recomendaciones afiliadas.
 - `js/main.js`: idioma ES/EN, filtros y búsqueda del catálogo, traducciones, navegación móvil y textos.
 - `js/assistant.js`: asistente local de reglas que recomienda artículos afiliados y anuncios propios, y enlaza guías; procesa las consultas en el navegador y no llama a una API.
 - `assets/products/`: imágenes optimizadas de las fichas oficiales de Miles Jewellery.
 - `assets/own-listings/`: fotos optimizadas de anuncios de Vinted y Wallapop enlazados a sus fichas individuales.
-- `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: fotografías editoriales originales de la marca.
+- `assets/sisi-hero.jpg` y `assets/sisi-story.jpg`: originales editoriales; el sitio usa sus variantes WebP optimizadas.
 - `assets/sisi-logo-horizontal.png` y `assets/sisi-cat-mark.png`: masters del wordmark y el icono de gato; el sitio usa versiones optimizadas.
 - `blog.html` y `blog-*.html`: journal y guías.
 - `legal.html`, `privacy.html` y `cookies.html`: páginas legales que requieren revisión según los datos y la actividad reales.
@@ -21,7 +21,7 @@ Sitio bilingüe en HTML, CSS y JavaScript puro, preparado para GitHub Pages y pu
 
 ## Catálogo y transparencia
 
-La portada y las páginas de categoría separan visual y funcionalmente las recomendaciones afiliadas de Miles Jewellery y los artículos propios anunciados en Vinted y Wallapop. La home destaca seis fichas; el filtro Todo mantiene acceso a las trece recomendaciones. La vitrina muestra seis piezas únicas con ocho enlaces directos: dos artículos con fotos coincidentes se agrupan en una tarjeta con ambos enlaces. El precio y la disponibilidad se consultan en las plataformas y pueden cambiar. Los materiales se presentan como declaraciones de cada anuncio, no como una verificación independiente. Una ficha de anillo tiene una discrepancia visible entre el campo de material y su descripción; se advierte en la tarjeta.
+La portada y las páginas de categoría separan visual y funcionalmente las recomendaciones afiliadas de Miles Jewellery y los artículos propios anunciados en Vinted y Wallapop. La home destaca seis fichas; el filtro Todo mantiene acceso a las trece recomendaciones. La vitrina muestra siete piezas únicas con nueve enlaces directos: dos artículos con fotos coincidentes se agrupan en una tarjeta con ambos enlaces. El precio y la disponibilidad se consultan en las plataformas y pueden cambiar. Los materiales se presentan como declaraciones de cada anuncio, no como una verificación independiente. Una ficha de anillo tiene una discrepancia visible entre el campo de material y su descripción; se advierte en la tarjeta.
 
 Las fichas de Miles identifican a `Miles Jewellery` como proveedor y dirigen a su tienda. La divulgación de que algunos enlaces son afiliados de Awin permanece en los avisos generales y el pie de página.
 
@@ -38,4 +38,4 @@ El sitio no necesita instalación. Desde la raíz del repositorio, puedes servir
 `legal.html` conserva marcadores para los datos de titular y contacto, y `privacy.html` / `cookies.html` son borradores. Completa y revisa esas páginas según tu situación real antes de considerar que los textos legales están terminados.
 
 
-En la consulta pública del perfil de Vinted del 22 de octubre de 2026 aparecían 51 valoraciones. La web muestra el recuento con fecha y un enlace a la fuente; no las presenta como reseñas de los productos afiliados ni inventa una puntuación media. Actualiza el recuento y la fecha cuando lo revises.
+En la consulta pública del perfil de Vinted del 24 de octubre de 2026 aparecían 51 valoraciones y cinco anuncios activos, incluido el anillo de laurel añadido al catálogo. La web muestra el recuento con fecha y un enlace a la fuente; no las presenta como reseñas de los productos afiliados ni inventa una puntuación media. Actualiza el recuento y la fecha cuando lo revises.

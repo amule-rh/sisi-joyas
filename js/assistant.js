@@ -65,15 +65,15 @@
       ((has("moissanita", "moissanite") && has("que es", "what is", "como se compara", "se diferencia")));
     if (asksAboutGemstones) return { key: "gem", ids: [], article: "gem" };
     if (has("pieza propia", "piezas propias", "anuncio propio", "anuncios propios", "mis joyas", "mis anuncios", "own listing", "own listings", "own pieces", "my listings")) {
-      return { key: "own", ids: ["own-ring-adjustable", "own-yellow-pendant", "own-rhombus-bracelet", "own-wallapop-zirconia-cross-earrings"] };
+      return { key: "own", ids: ["own-ring-adjustable", "own-laurel-ring", "own-yellow-pendant", "own-rhombus-bracelet", "own-wallapop-zirconia-cross-earrings"] };
     }
     if (has("regalo", "regalar", "gift", "cumple", "aniversario")) return { key: "gift", ids: ["own-yellow-pendant", "own-wallapop-zirconia-cross-earrings", "miles-heart-pendant", "miles-huggie-2row"], article: "gift" };
-    if (has("oro", "dorado", "chapado", "gold", "plated")) return { key: has("cruz", "cross") ? "cross" : "gold", ids: ["own-vinted-halo-ring", "miles-cross-gold-iced", "miles-ring-13mm"] };
+    if (has("oro", "dorado", "chapado", "gold", "plated")) return { key: has("cruz", "cross") ? "cross" : "gold", ids: ["own-laurel-ring", "own-vinted-halo-ring", "miles-cross-gold-iced", "miles-ring-13mm"] };
     if (has("hamsa", "mano")) return { key: "hamsa", ids: ["miles-hamsa-pendant"] };
     if (has("cruz", "cross")) return { key: "cross", ids: ["own-cross-earrings", "own-wallapop-zirconia-cross-earrings", "miles-cross-necklace", "miles-cross-gold-iced"] };
     if (has("corazon", "heart")) return { key: "heart", ids: ["miles-heart-pendant"], article: "gift" };
     if (has("pendiente", "pendientes", "aro", "aros", "huggie", "earring", "stud")) return { key: "earrings", ids: ["own-cross-earrings", "own-wallapop-zirconia-cross-earrings", "miles-huggie-2row", "miles-princess-studs"] };
-    if (has("anillo", "anillos", "ring", "rings", "talla")) return { key: "rings", ids: ["own-ring-adjustable", "own-vinted-halo-ring", "miles-ring-tennis-3mm", "miles-ring-13mm"] };
+    if (has("anillo", "anillos", "ring", "rings", "talla")) return { key: "rings", ids: ["own-ring-adjustable", "own-laurel-ring", "own-vinted-halo-ring", "miles-ring-tennis-3mm", "miles-ring-13mm"] };
     if (has("pulsera", "pulseras", "brazalete", "bracelet", "wrist")) return { key: "bracelets", ids: ["own-rhombus-bracelet", "miles-tennis-bracelet", "miles-bracelet-star-8mm"] };
     if (has("cadena", "collar", "colgante", "necklace", "pendant", "chain")) return { key: "chain", ids: ["own-yellow-pendant", "miles-tennis-chain", "miles-cross-necklace", "miles-heart-pendant"] };
     if (has("plata", "silver", "925", "material", "metal")) return { key: "material", ids: ["own-ring-adjustable", "own-wallapop-zirconia-cross-earrings", "miles-huggie-2row", "miles-princess-studs"], article: "care" };

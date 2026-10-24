@@ -110,6 +110,8 @@ const I18N = {
     own_yellow_pendant_specs: "Plata y piedra amarilla, según el anuncio · cadena ajustable de 45–50 cm.",
     own_halo_ring_name: "Anillo halo de moissanita ajustable",
     own_halo_ring_specs: "El atributo indica plata; el texto menciona oro blanco de 18K. Confirma el metal antes de comprar.",
+    own_laurel_ring_name: "Anillo de laurel dorado con piedras SiSi",
+    own_laurel_ring_specs: "Talla ajustable · nuevo con etiquetas. El anuncio no especifica el metal; confirma la composición antes de comprar.",
     own_rhombus_bracelet_name: "Pulsera de circonitas en rombo",
     own_rhombus_bracelet_specs: "Color plateado según ficha; no se especifica la ley del metal.",
     own_wallapop_zirconia_name: "Pendientes colgantes de cruz",
@@ -129,6 +131,8 @@ const I18N = {
     cookies: "Cookies",
     footer_made: "Hecho con cuidado.",
     nav_reviews: "Opiniones",
+    menu_open: "Abrir menú",
+    menu_close: "Cerrar menú",
     hero_own_cta: "Explorar piezas de Sisi",
     category_nav_title: "EXPLORA POR CATEGORÍA",
     category_nav_aria: "Explorar joyas recomendadas por categoría",
@@ -142,7 +146,7 @@ const I18N = {
     review_eyebrow: "OPINIONES DEL PERFIL DE SISI",
     review_count_prefix: "51 valoraciones en",
     review_copy: "Opiniones del perfil de Sisi en Vinted; no son reseñas de productos afiliados. Consulta las valoraciones y su contexto en la plataforma.",
-    review_stamp: "Perfil consultado el 22 de octubre de 2026.",
+    review_stamp: "Perfil consultado el 24 de octubre de 2026.",
     review_cta: "Leer valoraciones en Vinted ↗",
     category_page_products_title: "Piezas de esta selección",
     category_page_cta: "Ver selección completa",
@@ -306,6 +310,8 @@ const I18N = {
     own_yellow_pendant_specs: "Silver and a yellow stone, according to the listing · adjustable 45–50 cm chain.",
     own_halo_ring_name: "Adjustable moissanite halo ring",
     own_halo_ring_specs: "Vinted's material field says silver; the description says 18K white gold. Confirm the metal before buying.",
+    own_laurel_ring_name: "SiSi gold-tone laurel ring with stones",
+    own_laurel_ring_specs: "Adjustable · new with tags. The listing does not specify the metal; confirm the composition before buying.",
     own_rhombus_bracelet_name: "Rhomboid cubic-zirconia bracelet",
     own_rhombus_bracelet_specs: "Silver-tone according to the listing; metal fineness is not specified.",
     own_wallapop_zirconia_name: "Dangling cross earrings",
@@ -325,6 +331,8 @@ const I18N = {
     cookies: "Cookies",
     footer_made: "Made with care.",
     nav_reviews: "Reviews",
+    menu_open: "Open menu",
+    menu_close: "Close menu",
     hero_own_cta: "Explore Sisi’s own pieces",
     category_nav_title: "EXPLORE BY CATEGORY",
     category_nav_aria: "Explore recommended jewellery by category",
@@ -338,7 +346,7 @@ const I18N = {
     review_eyebrow: "REVIEWS OF SISI’S PROFILE",
     review_count_prefix: "51 reviews on",
     review_copy: "These are reviews of Sisi’s Vinted profile, not reviews of affiliate products. Read them in context on the platform.",
-    review_stamp: "Profile checked on 22 October 2026.",
+    review_stamp: "Profile checked on 24 October 2026.",
     review_cta: "Read reviews on Vinted ↗",
     category_page_products_title: "Pieces in this edit",
     category_page_cta: "View the full edit",
@@ -471,6 +479,12 @@ function applyLang() {
     element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
   });
 
+  const menuButton = document.querySelector("#menu-toggle");
+  if (menuButton) {
+    const menuLabel = menuButton.getAttribute("aria-expanded") === "true" ? "menu_close" : "menu_open";
+    menuButton.setAttribute("aria-label", t(menuLabel));
+  }
+
   document.querySelectorAll("[data-alt-es][data-alt-en]").forEach((image) => {
     image.alt = lang === "es" ? image.dataset.altEs : image.dataset.altEn;
   });
@@ -517,13 +531,14 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", () => {
       const isOpen = navigation.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      menuButton.setAttribute("aria-label", t(isOpen ? "menu_close" : "menu_open"));
     });
 
     navigation.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navigation.classList.remove("is-open");
         menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", t("menu_open"));
       });
     });
   }
